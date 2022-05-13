@@ -1,3 +1,13 @@
+document.body.onload = generateForm();
+
+function generateForm() {
+  let main_div = document.createElement("div");
+  main_div.classList.add("container", "my-5")
+  main_div.innerHTML = htmlTemplate();
+
+  document.body.appendChild(main_div)
+}
+
 function htmlTemplate() {
   let html = `
   <div class="row">
@@ -201,13 +211,3 @@ function htmlTemplate() {
 
   return html;
 }
-
-function generateForm() {
-  let main_div = document.createElement("div");
-  main_div.classList.add("container", "my-5")
-  main_div.innerHTML = htmlTemplate();
-
-  document.body.appendChild(main_div)
-}
-
-document.body.onload = generateForm();
